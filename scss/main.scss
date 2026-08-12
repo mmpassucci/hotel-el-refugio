@@ -1,0 +1,14 @@
+
+@use "./utilities/variables";
+@use "./components/header";
+@use "./utilities/base";
+@use "./components/hero";
+@use "./components/botones";
+@use "./components/forms";
+@use "./components/footer";
+@use "./components/cards";
+@use "./pages/nosotros.scss";
+@use "./pages/novedades";
+
+// fuentes
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');

@@ -1,0 +1,44 @@
+@use "../utilities/variables" as v;
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: v.$back-med;
+  width: 100%;
+  height: 20vh;
+box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+padding-left: 20px;
+border-radius: 0  0 v.$border-rad-med v.$border-rad-med ;
+
+
+  .nav-links {
+    font-family: v.$tipo-text;
+    list-style: none;    
+    padding-right: 15px;
+
+ 
+      & a{
+      display: inline-block;
+      text-decoration: none;
+      font-size: v.$size-normal;
+      padding: 15px;    
+      color: v.$color-links;
+
+        &:hover {
+           color: v.$color-button;
+         }
+    }
+  }
+}
+
+.logo {
+    transition: transform 0.3s ease; 
+
+    &:hover {
+       transform: scale(1.1);
+    }
+}
+
+      // transition: transform 0.6s ease;

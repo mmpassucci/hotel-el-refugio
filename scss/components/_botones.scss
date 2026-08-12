@@ -1,0 +1,40 @@
+@use "../utilities/variables" as v;
+
+ button {
+    border: none;
+      background-color: v.$color-button;
+  color: v.$color-links;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: v.$tipo-text;
+  font-size: v.$size-normal;
+
+  }
+.btn-primary {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.8rem;
+  background-color: v.$color-button;
+  color: v.$color-links;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+  font-family: v.$tipo-text;
+  font-size: v.$size-normal;
+  cursor: pointer;
+
+  &.btn-primary:hover {
+  opacity: 0.7;}
+
+}
+
+.botonreserva {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
