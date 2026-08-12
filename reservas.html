@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservas | Hotel Boutique Refugio</title>
+    <link rel="shortcut icon" href="./img/logos/refugioicono.png" type="image/png">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+  <header>
+    <nav class="header">
+      <div class="logo"><img src="./img/logos/refugio.png" alt="logo hotel el refugio"></div>
+      <ul class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">El hotel</a>
+      <a href="habitaciones.html">Habitaciones</a>
+      <a href="novedades.html">Novedades</a>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content">
+      <h2>Reservá tu Estadía</h2>
+      <form id="form-contacto">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="checkin">Fecha de check-in</label>
+        <input type="date" id="checkin" name="checkin" required>
+
+        <label for="checkout">Fecha de check-out</label>
+        <input type="date" id="checkout" name="checkout" required>
+
+        <label for="huespedes">Cantidad de huéspedes</label>
+        <input type="number" id="huespedes" name="huespedes" min="1" value="1" required>
+
+        <label for="habitacion">Tipo de habitación</label>
+      <input type="habitacion" id="habitacion" name="habitacion" required placeholder="Indica: individial, doble o triple">
+
+        <label for="mensaje">Comentarios (opcional)</label>
+        <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+      </form>
+      <div class="botonreserva">
+       <a href="#" class="btn-primary"><button type="submit">Confirmar reserva</button></a>
+       </div>
+    </section>
+  </main>
+
+    <footer class="footer">
+    <div class="pfooter">
+       <p>&copy; 2026 Hotel El Refugio. Todos los derechos reservados.</p>
+    </div>
+   
+    <div class="redes">
+      <a href="https://www.instagram.com/"><img src="./img/logos/instagram.png" alt="logo instagram" title="Instagram"></a>
+      <a href="https://www.facebook.com/"><img src="./img/logos/facebook.png" alt="logo facebook" title="Facebook"></a>
+      <a href="https://web.whatsapp.com/"><img src="./img/logos/whatsapp.png" alt="logo instagram" title="Whatsapp"></a>
+      <a href="https://x.com/?lang=es"><img src="./img/logos/x.png" alt="logo x" title="X"></a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
