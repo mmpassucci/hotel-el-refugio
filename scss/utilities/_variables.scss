@@ -29,7 +29,11 @@ $size-bigger-plus: 2.2rem;
 $size-smallest: 0.3rem;
 
 // bordes redondeados
-
+$border-rad-xsmall: 0.2rem;
 $border-rad-small: 0.5rem;
 $border-rad-med: 1rem;
 $border-rad-big: 2rem;
+
+// sombras 
+$shadowcard: 0 4px 12px rgba(0, 0, 0, 0.08);
+$shadowhover: 0 8px 20px rgba(0, 0, 0, 0.15);
