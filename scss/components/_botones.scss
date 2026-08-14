@@ -1,16 +1,15 @@
 @use "../utilities/variables" as v;
 
- button {
-    border: none;
-      background-color: v.$color-button;
+button {
+  border: none;
+  background-color: v.$color-button;
   color: v.$color-links;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: v.$border-rad-xsmall;
   font-weight: 600;
   font-family: v.$tipo-text;
   font-size: v.$size-normal;
-
-  }
+}
 .btn-primary {
   display: inline-block;
   margin-top: 1.5rem;
@@ -18,16 +17,16 @@
   background-color: v.$color-button;
   color: v.$color-links;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: v.$border-rad-xsmall;
   font-weight: 600;
   transition: opacity 0.2s;
   font-family: v.$tipo-text;
   font-size: v.$size-normal;
   cursor: pointer;
 
-  &.btn-primary:hover {
-  opacity: 0.7;}
-
+    &.btn-primary:hover {
+      opacity: 0.7;
+    }
 }
 
 .botonreserva {
@@ -35,6 +34,3 @@
   justify-content: center;
   align-items: center;
 }
-
-
-

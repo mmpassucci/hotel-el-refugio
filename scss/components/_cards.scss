@@ -5,6 +5,7 @@
   max-width: 1200px;
   margin: 0 auto;
 
+
   & h2 {
     font-size: 2.2rem;
     text-align: center;
@@ -37,7 +38,7 @@
   border-radius: 12px;
   padding: 1.5rem;
   background: v.$back-soft;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: v.$shadowcard; 
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
@@ -50,7 +51,7 @@
 
   &:hover {
     transform: translateY(-9px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: v.$shadowhover;
   }
 
   h3 {
