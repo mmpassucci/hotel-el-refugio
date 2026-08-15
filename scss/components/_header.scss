@@ -8,37 +8,66 @@
   background-color: v.$back-med;
   width: 100%;
   height: 20vh;
-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-padding-left: 20px;
-border-radius: 0px 0px v.$border-rad-med v.$border-rad-med ;
+  // padding-left: 20px;
+  border-radius: 0px 0px v.$border-rad-med v.$border-rad-med;
 
+  @media (max-width: 900px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 
-  .nav-links {
-    font-family: v.$tipo-text;
-    list-style: none;    
-    padding-right: 15px;
+  @media (max-width: 500px) {
+    flex-direction: column;
+    justify-content: center;
+      height: 25vh;
 
- 
-      & a{
-      display: inline-block;
-      text-decoration: none;
-      font-size: v.$size-normal;
-      padding: 15px;    
-      color: v.$color-links;
+  }
+}
 
-        &:hover {
-           color: v.$color-button;
-         }
+.nav-links {
+  font-family: v.$tipo-text;
+  list-style: none;
+  padding-right: 15px;
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: v.$size-normal;
+    padding: 15px;
+    color: v.$color-links;
+
+    &:hover {
+      color: v.$color-button;
     }
+
+   @media (max-width: 1200px) and (min-width: 700) {
+    font-size: v.$size-small;
+  }
+
+  @media (max-width: 699px) and (min-width: 400px) {
+    font-size: v.$size-smaller;
+  align-self: center;
+  padding: 5px;
+
+  }
+
+  @media (max-width: 399px) {
+    font-size: v.$size-smallest;
+  align-self: center;
+  padding: 5px;
+
+  }
   }
 }
 
 .logo {
-    transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
+  padding-left: 1rem;
 
-    &:hover {
-       transform: scale(1.1);
-    }
+  &:hover {
+    transform: scale(1.1);
+  }
+
 }
 
-      // transition: transform 0.6s ease;
+// transition: transform 0.6s ease;

@@ -7,28 +7,60 @@
   background-color: #b99898;
   width: 100%;
   height: 20vh;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-  padding-left: 20px;
   border-radius: 0px 0px 1rem 1rem;
 }
-.header .nav-links {
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (max-width: 500px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    height: 25vh;
+  }
+}
+
+.nav-links {
   font-family: "Montserrat", sans-serif;
   list-style: none;
   padding-right: 15px;
 }
-.header .nav-links a {
+.nav-links a {
   display: inline-block;
   text-decoration: none;
   font-size: 1rem;
   padding: 15px;
   color: #F4F1EC;
 }
-.header .nav-links a:hover {
+.nav-links a:hover {
   color: #D2D904;
+}
+@media (max-width: 1200px) and (min-width: 700) {
+  .nav-links a {
+    font-size: 0.87rem;
+  }
+}
+@media (max-width: 699px) and (min-width: 400px) {
+  .nav-links a {
+    font-size: 0.75rem;
+    align-self: center;
+    padding: 5px;
+  }
+}
+@media (max-width: 399px) {
+  .nav-links a {
+    font-size: 0.6rem;
+    align-self: center;
+    padding: 5px;
+  }
 }
 
 .logo {
   transition: transform 0.3s ease;
+  padding-left: 1rem;
 }
 .logo:hover {
   transform: scale(1.1);
@@ -71,11 +103,7 @@ h1 {
   color: #F4F1EC;
   font-family: "Playfair Display", serif;
 }
-.hero .btn-primary :hover {
-  opacity: 0.85;
-}
-
-.parrafohero {
+.hero .parrafohero {
   color: #F4F1EC;
 }
 
@@ -84,7 +112,6 @@ button {
   background-color: #D2D904;
   color: #F4F1EC;
   text-decoration: none;
-  border-radius: 0.2rem;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
@@ -108,60 +135,43 @@ button {
   opacity: 0.7;
 }
 
-.botonreserva {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.reserva {
+  margin: 0 auto;
 }
 
 .content {
   text-align: center;
+  font-size: "Montserrat", sans-serif;
 }
 
-#form-contacto {
+.form-contacto {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
-  max-width: 500px;
+  gap: 0.6rem;
+  max-width: 600px;
   margin: auto;
 }
-#form-contacto label {
+.form-contacto label {
   font-weight: 600;
-  margin-top: 0.5rem;
+  margin-top: 0.7rem;
   color: #1a100f;
+  font-size: 0.87rem;
 }
-#form-contacto input,
-#form-contacto textarea {
+.form-contacto input,
+.form-contacto textarea {
   padding: 0.6rem;
   border: 1px solid rgba(206, 187, 194, 0.3411764706);
   border-radius: 0.5rem;
-  font-family: inherit;
 }
-#form-contacto button {
+.form-contacto button {
   margin-top: 1rem;
   padding: 0.7rem;
-  background-color: #1a1a2e;
   color: #F4F1EC;
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
 }
-#form-contacto button form button:hover {
-  opacity: 0.85;
-}
-
-.button-primary {
-  background-color: #D2D904;
-  color: #F4F1EC;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-  display: block;
-  width: 100px;
-  justify-content: center;
-}
-.button-primary:hover {
+.form-contacto button:hover {
   opacity: 0.85;
 }
 
@@ -174,10 +184,21 @@ button {
   height: 25vh;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
+@media (max-width: 680px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 .redes {
-  padding-right: 40px;
   transition: transform 0.6s ease;
+}
+@media (max-width: 680px) {
+  .redes {
+    padding-top: 20px;
+  }
 }
 .redes img {
   width: 35px;
@@ -189,13 +210,13 @@ button {
 }
 
 .pfooter {
-  padding-left: 40px;
   font-size: 0.75rem;
+  text-align: center;
 }
 
 .content {
   padding: 4rem 2rem;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
 }
 .content h2 {
@@ -311,9 +332,11 @@ h2 {
 }
 
 .reservas {
-  background: linear-gradient(to top, #b99898, #E1D5C9, #F7F5F2 80%);
+  background: linear-gradient(to top, #b99898, #E1D5C9, #F7F5F2 85%);
   border-radius: 0px 0px 0.5rem 0.5rem;
   margin-top: 20px;
+  max-width: 90%;
+  margin: auto;
 }
 
 /*# sourceMappingURL=main.css.map */

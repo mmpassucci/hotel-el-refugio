@@ -3,5 +3,6 @@
     background: linear-gradient(to top, v.$back-med, v.$back-soft, v.$back 85%);
     border-radius: 0px 0px v.$border-rad-small v.$border-rad-small;
     margin-top: 20px;
-
+     max-width: 90%;
+     margin: auto;
 }

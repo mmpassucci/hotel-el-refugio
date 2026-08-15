@@ -1,23 +1,20 @@
 @use "../utilities/variables" as v;
 
-
 .refugio {
-       display: flex;
-       flex-direction: row;
-       justify-content: center;
-       align-items: center;
-       column-gap: 0.7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.7rem;
 
-       & img {
-              max-width: 50%;
-              
-       }
-       
+  img {
+    max-width: 50%;
+  }
 }
 .textorefugio {
-   column-count: 2;
-    column-gap: 40px;
-    line-height: 1.7;
+  column-count: 2;
+  column-gap: 40px;
+  line-height: 1.7;
   max-width: 80%;
   justify-self: center;
   font-size: v.$size-normal;
@@ -31,11 +28,10 @@
   text-align: center;
 }
 
-.uno {
-  padding-top: 30px;
+  .uno {
+    padding-top: 30px;
+  }
 
-}
-
-.dos {
-  padding-bottom: 50px;
-}
+  .dos {
+    padding-bottom: 50px;
+  }

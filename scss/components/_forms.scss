@@ -2,56 +2,42 @@
 
 .content {
   text-align: center;
+  font-size: v.$tipo-text;
 }
-#form-contacto {
+.form-contacto {
   display: flex;
   flex-direction: column;
   gap: v.$size-smallest;
-  max-width: 500px;
+  max-width: 600px;
   margin: auto;
 
 
-  & label {
+  label {
     font-weight: 600;
-    margin-top: 0.5rem;
+    margin-top: 0.7rem;
     color: v.$color-prime;
+    font-size: v.$size-small;
   }
 
-  & input,
+  input,
   textarea {
     padding: 0.6rem;
     border: 1px solid v.$back-dark;
     border-radius: v.$border-rad-small;
-    font-family: inherit;
   }
 
-  & button {
+  button {
     margin-top: 1rem;
     padding: 0.7rem;
-    background-color: #1a1a2e;
     color: v.$color-links;
     border: none;
     border-radius: v.$border-rad-small;
     cursor: pointer;
 
-    & form button:hover {
-      opacity: 0.85;
-    }
+      &:hover {
+        opacity: 0.85;
+      } 
   }
 }
 
-.button-primary {
-  background-color: v.$color-button;
-  color: v.$color-links;
-  border: none;
-  border-radius: v.$border-rad-small;
-  cursor: pointer;
-  font-family: v.$tipo-text;
-  display: block;
-  width: 100px;
-  justify-content: center;
 
-  &:hover {
-    opacity: 0.85;
-  }
-}

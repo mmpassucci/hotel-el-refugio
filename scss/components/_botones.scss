@@ -5,11 +5,11 @@ button {
   background-color: v.$color-button;
   color: v.$color-links;
   text-decoration: none;
-  border-radius: v.$border-rad-xsmall;
   font-weight: 600;
   font-family: v.$tipo-text;
   font-size: v.$size-normal;
 }
+
 .btn-primary {
   display: inline-block;
   margin-top: 1.5rem;
@@ -24,13 +24,12 @@ button {
   font-size: v.$size-normal;
   cursor: pointer;
 
-    &.btn-primary:hover {
-      opacity: 0.7;
-    }
+  &.btn-primary:hover {
+    opacity: 0.7;
+  }
 }
 
-.botonreserva {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.reserva {
+    margin: 0 auto;
 }
