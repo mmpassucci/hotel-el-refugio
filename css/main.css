@@ -9,19 +9,6 @@
   height: 20vh;
   border-radius: 0px 0px 1rem 1rem;
 }
-@media (max-width: 900px) {
-  .header {
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-@media (max-width: 500px) {
-  .header {
-    flex-direction: column;
-    justify-content: center;
-    height: 25vh;
-  }
-}
 
 .nav-links {
   font-family: "Montserrat", sans-serif;
@@ -37,25 +24,6 @@
 }
 .nav-links a:hover {
   color: #D2D904;
-}
-@media (max-width: 1200px) and (min-width: 700) {
-  .nav-links a {
-    font-size: 0.87rem;
-  }
-}
-@media (max-width: 699px) and (min-width: 400px) {
-  .nav-links a {
-    font-size: 0.75rem;
-    align-self: center;
-    padding: 5px;
-  }
-}
-@media (max-width: 399px) {
-  .nav-links a {
-    font-size: 0.6rem;
-    align-self: center;
-    padding: 5px;
-  }
 }
 
 .logo {
@@ -155,7 +123,7 @@ button {
   font-weight: 600;
   margin-top: 0.7rem;
   color: #1a100f;
-  font-size: 0.87rem;
+  font-size: 0.8rem;
 }
 .form-contacto input,
 .form-contacto textarea {
@@ -218,6 +186,7 @@ button {
   padding: 4rem 2rem;
   max-width: 100%;
   margin: 0 auto;
+  column-gap: 2rem;
 }
 .content h2 {
   font-size: 2.2rem;
@@ -232,18 +201,14 @@ button {
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  column-gap: 2rem;
 }
-@media (max-width: 900px) {
+@media (min-width: 785px) {
   .cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 600px) {
-  .cards {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.2rem;
   }
 }
 
@@ -254,6 +219,7 @@ button {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   text-align: center;
+  margin: 1rem;
 }
 .card img {
   max-width: 100%;
@@ -264,20 +230,32 @@ button {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 .card h3 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 0.75rem;
   color: #42201d;
 }
+@media (min-width: 785px) {
+  .card h3 {
+    font-size: 1.2rem;
+  }
+}
 .card p {
-  font-size: 0.87rem;
+  font-size: 0.8rem;
   color: #42201d;
   line-height: 1.4;
   margin-bottom: 0.75rem;
 }
-.card .logo-img {
-  max-width: 15%;
+@media (min-width: 630px) {
+  .card p {
+    font-size: 1rem;
+  }
 }
-.card .price {
+
+.logo-img {
+  width: 20%;
+}
+
+.price {
   font-weight: bold;
   font-size: 1rem;
   color: #1a100f;
