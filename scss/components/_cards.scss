@@ -1,12 +1,10 @@
 @use "../utilities/variables" as v;
 
 .content {
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   max-width: 100%;
-  margin: 0 auto;
+  margin: 1rem auto;
   column-gap: 2rem;
-
-
 
   h2 {
     font-size: 2.2rem;
@@ -23,78 +21,104 @@
 }
 
 .cards {
- grid-template-columns: 1fr;
-   column-gap: 2rem;
+  grid-template-columns: 1fr;
+  width: 90%;
+  margin: 0 auto;
+  column-gap: 2rem; //mobile
 
-  @media (min-width: 785px) 
-  {display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: v.$border-rad-xsmall;}
+  @media (min-width: 768px){ //----------------------> { {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    column-gap: 1rem;
+  }
 }
-
 
 .card {
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 0.2rem;
   background: v.$back-soft;
-  box-shadow: v.$shadowcard; 
+  box-shadow: v.$shadowcard;
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
   text-align: center;
-     margin: v.$border-rad-med;
+  margin: 7px;
 
   img {
     max-width: 100%;
-    border-radius: 12px;
+    border-radius: v.$border-rad-small;
   }
 
   &:hover {
     transform: translateY(-9px);
     box-shadow: v.$shadowhover;
   }
-
-  h3 {
-    font-size: v.$size-big;
-    margin-bottom: 0.75rem;
-    color: v.$color-text;
-
-      @media (min-width: 785px) {
-  font-size: v.$size-big;
 }
-  }
 
-  p {
-    font-size: v.$size-small;
-    color: v.$color-text;
-    line-height: 1.4;
-    margin-bottom: 0.75rem;
-
-            @media (min-width: 630px) {
+.card-title {
   font-size: v.$size-normal;
-}
-        
+  margin-bottom: 0.75rem;
+  color: v.$color-text;
 
+  @media (min-width: 768px) {//----------------------> { {
+    font-size: v.$size-big;
   }
 }
 
-  .logo-img {
-    width: 20%;
+.card-text {
+  font-size: v.$size-small;
+  color: v.$color-text;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
 
-
-  }
-  .price {
-    font-weight: bold;
+  @media (min-width: 768px) {
     font-size: v.$size-normal;
-    color: v.$color-prime;
-    margin-bottom: 0;
   }
+}
+
+.logo-img {
+  width: 20%;
+}
+.price {
+  font-weight: bold;
+  font-size: v.$size-smaller;
+  color: v.$color-text;
+  margin-bottom: 1rem;
+}
 
 // pagina novedades
 
 .card-group {
-  column-gap: 1rem;
+  column-gap: v.$border-rad-med;
   max-width: 100%;
   margin: 0 auto;
-  height: 30%;
+}
+
+// pagina inicio
+
+.tituloinicio {
+  font-size: v.$size-normal;
+  color: v.$color-text;
+}
+
+.parrafoinicio {
+  font-size: v.$size-smaller;
+  padding: 13px;
+  color: v.$color-text;
+  text-wrap: pretty;
+
+  @media (min-width: 768px) {
+    font-size: v.$size-small;
+    padding: 17px;
+  }
+}
+
+.logoinicio {
+  width: 17%;
+  padding: 10px;
+
+  @media (min-width: 768px) {
+    width: 20%;
+  }
 }

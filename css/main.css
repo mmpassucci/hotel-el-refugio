@@ -1,37 +1,56 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 .header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: #b99898;
   width: 100%;
   height: 20vh;
   border-radius: 0px 0px 1rem 1rem;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .nav-links {
   font-family: "Montserrat", sans-serif;
   list-style: none;
-  padding-right: 15px;
+  justify-self: center;
 }
 .nav-links a {
   display: inline-block;
   text-decoration: none;
-  font-size: 1rem;
-  padding: 15px;
+  font-size: 0.6rem;
+  padding: 7px;
   color: #F4F1EC;
 }
 .nav-links a:hover {
   color: #D2D904;
 }
+@media (min-width: 768px) {
+  .nav-links a {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
 
 .logo {
+  width: 90px;
+  height: auto;
   transition: transform 0.3s ease;
-  padding-left: 1rem;
 }
 .logo:hover {
   transform: scale(1.1);
+}
+@media (min-width: 768px) {
+  .logo {
+    padding-left: 2rem;
+  }
 }
 
 * {
@@ -123,20 +142,20 @@ button {
   font-weight: 600;
   margin-top: 0.7rem;
   color: #1a100f;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 .form-contacto input,
 .form-contacto textarea {
   padding: 0.6rem;
   border: 1px solid rgba(206, 187, 194, 0.3411764706);
-  border-radius: 0.5rem;
+  border-radius: 0.7rem;
 }
 .form-contacto button {
   margin-top: 1rem;
   padding: 0.7rem;
   color: #F4F1EC;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.7rem;
   cursor: pointer;
 }
 .form-contacto button:hover {
@@ -152,7 +171,7 @@ button {
   height: 25vh;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
-@media (max-width: 680px) {
+@media (max-width: 768px) {
   .footer {
     flex-direction: column;
     justify-content: center;
@@ -161,12 +180,8 @@ button {
 }
 
 .redes {
+  padding-top: 20px;
   transition: transform 0.6s ease;
-}
-@media (max-width: 680px) {
-  .redes {
-    padding-top: 20px;
-  }
 }
 .redes img {
   width: 35px;
@@ -183,9 +198,9 @@ button {
 }
 
 .content {
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   max-width: 100%;
-  margin: 0 auto;
+  margin: 1rem auto;
   column-gap: 2rem;
 }
 .content h2 {
@@ -202,51 +217,56 @@ button {
 
 .cards {
   grid-template-columns: 1fr;
+  width: 90%;
+  margin: 0 auto;
   column-gap: 2rem;
 }
-@media (min-width: 785px) {
+@media (min-width: 768px) {
   .cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    column-gap: 1rem;
   }
 }
 
 .card {
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 0.2rem;
   background: #E1D5C9;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   text-align: center;
-  margin: 1rem;
+  margin: 7px;
 }
 .card img {
   max-width: 100%;
-  border-radius: 12px;
+  border-radius: 0.7rem;
 }
 .card:hover {
   transform: translateY(-9px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
-.card h3 {
-  font-size: 1.2rem;
+
+.card-title {
+  font-size: 1rem;
   margin-bottom: 0.75rem;
   color: #42201d;
 }
-@media (min-width: 785px) {
-  .card h3 {
+@media (min-width: 768px) {
+  .card-title {
     font-size: 1.2rem;
   }
 }
-.card p {
-  font-size: 0.8rem;
+
+.card-text {
+  font-size: 0.9rem;
   color: #42201d;
   line-height: 1.4;
   margin-bottom: 0.75rem;
 }
-@media (min-width: 630px) {
-  .card p {
+@media (min-width: 768px) {
+  .card-text {
     font-size: 1rem;
   }
 }
@@ -257,16 +277,43 @@ button {
 
 .price {
   font-weight: bold;
-  font-size: 1rem;
-  color: #1a100f;
-  margin-bottom: 0;
+  font-size: 0.75rem;
+  color: #42201d;
+  margin-bottom: 1rem;
 }
 
 .card-group {
   column-gap: 1rem;
   max-width: 100%;
   margin: 0 auto;
-  height: 30%;
+}
+
+.tituloinicio {
+  font-size: 1rem;
+  color: #42201d;
+}
+
+.parrafoinicio {
+  font-size: 0.75rem;
+  padding: 13px;
+  color: #42201d;
+  text-wrap: pretty;
+}
+@media (min-width: 768px) {
+  .parrafoinicio {
+    font-size: 0.9rem;
+    padding: 17px;
+  }
+}
+
+.logoinicio {
+  width: 17%;
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  .logoinicio {
+    width: 20%;
+  }
 }
 
 .refugio {
@@ -274,7 +321,6 @@ button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  column-gap: 0.7rem;
 }
 .refugio img {
   max-width: 50%;
@@ -282,14 +328,20 @@ button {
 
 .textorefugio {
   column-count: 2;
-  column-gap: 40px;
-  line-height: 1.7;
-  max-width: 80%;
+  column-gap: 25px;
+  line-height: 1.5;
+  max-width: 90%;
   justify-self: center;
-  font-size: 1rem;
+  font-size: 0.75rem;
   text-wrap: pretty;
-  padding-top: 40px;
+  margin-top: 1rem;
   text-align: justify;
+  text-wrap: pretty;
+}
+@media (min-width: 768px) {
+  .textorefugio {
+    font-size: 1rem;
+  }
 }
 
 .servicios {
@@ -302,7 +354,7 @@ button {
 }
 
 .dos {
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 h2 {
@@ -311,10 +363,10 @@ h2 {
 
 .reservas {
   background: linear-gradient(to top, #b99898, #E1D5C9, #F7F5F2 85%);
-  border-radius: 0px 0px 0.5rem 0.5rem;
+  border-radius: 0px 0px 0.7rem 0.7rem;
   margin-top: 20px;
   max-width: 90%;
-  margin: auto;
+  margin: 1rem auto;
 }
 
 /*# sourceMappingURL=main.css.map */

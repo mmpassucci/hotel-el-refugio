@@ -5,7 +5,6 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  column-gap: 0.7rem;
 
   img {
     max-width: 50%;
@@ -13,14 +12,19 @@
 }
 .textorefugio {
   column-count: 2;
-  column-gap: 40px;
-  line-height: 1.7;
-  max-width: 80%;
+  column-gap: 25px;
+  line-height: 1.5;
+  max-width: 90%;
   justify-self: center;
-  font-size: v.$size-normal;
+  font-size: v.$size-smaller;
   text-wrap: pretty;
-  padding-top: 40px;
+  margin-top: 1rem;
   text-align: justify;
+  text-wrap: pretty;
+
+    @media (min-width: 768px) {
+    font-size: v.$size-normal;
+  }
 }
 
 .servicios {
@@ -33,5 +37,5 @@
   }
 
   .dos {
-    padding-bottom: 50px;
+    padding-bottom: 30px;
   }
