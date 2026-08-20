@@ -1,35 +1,28 @@
 @use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
 
 button {
   border: none;
   background-color: v.$color-button;
-  color: v.$color-links;
+  // color: v.$color-links;
   text-decoration: none;
-  font-weight: 600;
+
   font-family: v.$tipo-text;
   font-size: v.$size-normal;
 }
 
 .btn-primary {
-  display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.8rem 1.8rem;
-  background-color: v.$color-button;
-  color: v.$color-links;
-  text-decoration: none;
-  border-radius: v.$border-rad-xsmall;
-  font-weight: 600;
-  transition: opacity 0.2s;
-  font-family: v.$tipo-text;
-  font-size: v.$size-normal;
-  cursor: pointer;
+ @include m.botonprincipal;
 
-  &.btn-primary:hover {
+  &:hover {
     opacity: 0.7;
   }
 }
 
-
 .reserva {
-    margin: 0 auto;
+    margin: 1rem auto;
 }
+
+
+
+

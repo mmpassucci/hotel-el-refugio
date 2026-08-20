@@ -7,46 +7,44 @@
   align-items: center;
   background-color: v.$back-med;
   width: 100%;
-  height: 20vh;
+  height: 25vh;
   border-radius: 0px 0px v.$border-rad-med v.$border-rad-med;
-  padding-bottom: 1rem;
+  padding-bottom: v.$padnormal;
 
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
+      height: 20vh;
   }
 }
 
 .nav-links {
   font-family: v.$tipo-text;
   list-style: none;
-  justify-self: center;
+ flex-wrap:nowrap;
 
   a {
-    display: inline-block;
+    // display: inline;
     text-decoration: none;
-    font-size: v.$size-smallest;
-    padding: 7px;
+    font-size: v.$size-smaller;
+   padding: v.$padsmaller;
     color: v.$color-links;
+    font-weight: 500;
 
     &:hover {
       color: v.$color-button;
     }
 
     @media (min-width: 768px) {
-      font-size: v.$size-normal;
-      padding: 1rem;
+      font-size: v.$size-small;
+      padding-right: 1rem;
     }
   }
 }
 .logo {
-   width: 90px;
+ padding-top: 1rem;
   height: auto;
   transition: transform 0.3s ease;
- 
-
-  
-
 
   &:hover {
     transform: scale(1.1);
