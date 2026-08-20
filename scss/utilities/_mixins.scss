@@ -1,0 +1,18 @@
+
+@use "./variables" as v;
+//mixin para boton principal
+
+@mixin botonprincipal {
+  display: inline;
+  margin-top: 1.5rem;
+  padding: v.$padsmall v.$padnormal;
+  background-color: v.$color-button;
+  color: v.$color-links;
+  text-decoration: none;
+  border-radius: v.$border-rad-smaller;
+  font-weight: 600;
+  transition: opacity 0.2s;
+  font-family: v.$tipo-text;
+  font-size: v.$size-small;
+  cursor: pointer;
+}
