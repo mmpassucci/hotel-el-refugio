@@ -1,0 +1,11 @@
+@use "../utilities/variables" as v;
+.habitaciones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: v.$size-smaller;
+
+    @media (min-width: 768px) {
+    font-size: v.$size-normal;
+  }
+}
