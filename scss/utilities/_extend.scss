@@ -1,0 +1,7 @@
+@use "./variables" as v;
+
+.cardtitulos {
+  font-size: v.$size-normal;
+  color: v.$color-text;
+  font-family: v.$tipo-text;
+}
