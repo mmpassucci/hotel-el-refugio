@@ -32,6 +32,10 @@
 }
 
 .pfooter {
-  font-size: v.$size-smaller;
+  font-size: v.$size-small;
   text-align: center;
+
+  h6 {
+    font-weight: 300;
+  }
 }

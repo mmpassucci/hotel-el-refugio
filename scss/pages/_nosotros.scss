@@ -7,9 +7,12 @@
   align-items: center;
 
   img {
-    max-width: 50%;
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
   }
 }
+
 .textorefugio {
   column-count: 2;
   column-gap: 25px;
@@ -20,9 +23,8 @@
   text-wrap: pretty;
   margin-top: 1rem;
   text-align: justify;
-  text-wrap: pretty;
 
-    @media (min-width: 768px) {
+  @media (min-width: 768px) {
     font-size: v.$size-normal;
   }
 }
@@ -32,10 +34,10 @@
   text-align: center;
 }
 
-  .uno {
-    padding-top: 30px;
-  }
+.uno {
+  padding-top: v.$padbig;
+}
 
-  .dos {
-    padding-bottom: 30px;
-  }
+.dos {
+  padding-bottom: v.$padbig;
+}

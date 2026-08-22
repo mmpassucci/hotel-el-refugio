@@ -5,11 +5,11 @@
 .content {
   padding: v.$padnormal v.$padbig;
   max-width: 100%;
-  margin: 1rem auto;
+  margin: 0 auto;
   column-gap: 2rem;
 
     @media (min-width: 768px) {
-    padding: v.$padbigger v.$padbiggest;
+    padding: v.$padbiggest v.$padbigger;
     }
 
   h2 {

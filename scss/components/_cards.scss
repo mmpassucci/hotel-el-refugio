@@ -1,94 +1,38 @@
 @use "../utilities/variables" as v;
-
-.content {
-  padding: v.$padnormal v.$padbig;
-  max-width: 100%;
-  margin: 1rem auto;
-  column-gap: 2rem;
-
-    @media (min-width: 768px) {
-    padding: v.$padbigger v.$padbiggest;
-    }
-
-  h2 {
-    font-size: v.$size-half-bigger;
-    text-align: center;
-    margin-bottom: 3rem;
-    color: v.$color-details;
-    font-family: v.$tipo-tit;
-
-     @media (min-width: 768px) {
-    font-size: v.$size-bigger-plus;
-  }
-  }
-
-    img {
-    max-width: 15%;
-    padding: v.$padmidnormal;
-  }
-}
-
+@use "../utilities/extend";
 
 //pagina habitaciones
 .cards {
   grid-template-columns: 1fr;
   width: 90%;
-  margin: 0 auto;
-  column-gap: 2rem; //mobile
-
-  @media (min-width: 768px){ //----------------------> { {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 100%;
-    column-gap: 1rem;
-  }
-}
-
-// pagina novedades con bootstrap
-.card {
-  border-radius: 12px;
-  padding: 0.2rem;
-  background: v.$back-soft;
-  box-shadow: v.$shadowcard;
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-  text-align: center;
-  margin: 7px;
-
-  img {
-    max-width: 100%;
-    border-radius: v.$border-rad-small;
-  }
-
-  &:hover {
-    transform: translateY(-9px);
-    box-shadow: v.$shadowhover;
-  }
-}
-
-.card-title, .tituloinicio{
-  font-size: v.$size-normal;
-  color: v.$color-text;
-   font-family: v.$tipo-text;
-
-    @media (min-width: 768px) {
-    font-size: v.$size-big;
-}
-}
-
-.card-text, .parrafoinicio{
-  color: v.$color-text;
-  line-height: 0.5rem;
-  margin-bottom: 0.75rem;
-    font-size: v.$size-smaller;
-  padding: 13px;
-  text-wrap: pretty;
-  line-height: 1rem;
+  margin: 1rem auto;
+  gap: 3rem;
 
   @media (min-width: 768px) {
-      font-size: v.$size-small;
-      padding: 17px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+// titulos cards novedades y habitaciones
+.card-title,
+.titulocard {
+  @extend .cardtitulos;
+
+  @media (min-width: 768px) {
+    font-size: v.$size-big;
+  }
+}
+
+// parrafos de cards de novedades y de habitaciones
+.card-text,
+.parrafocard {
+  @extend .cardparrafo;
+
+  @media (min-width: 768px) {
+    font-size: v.$size-small;
+    padding: v.$padnormal;
   }
 }
 
@@ -96,7 +40,7 @@
   width: 20%;
 }
 .price {
-  font-weight: bold;
+  font-weight: 400;
   font-size: v.$size-smaller;
   color: v.$color-text;
   margin-bottom: 1rem;
@@ -110,30 +54,11 @@
   margin: 0 auto;
 }
 
-// pagina inicio
-
-// .tituloinicio {
-//   font-size: v.$size-normal;
-//   color: v.$color-text;
-//    font-family: v.$tipo-text;
-// }
-
-// .parrafoinicio {
-//   font-size: v.$size-smaller;
-//   padding: 13px;
-//   color: v.$color-text;
-//   text-wrap: pretty;
-//   line-height: 1rem;
-
-//   @media (min-width: 768px) {
-//     font-size: v.$size-small;
-//     padding: 17px;
-//   }
-// }
-
-//logos negros de las tarjetas
+//iconos de las tarjetas
 .logoinicio {
-  width: 17%;
+  width: 50px;
+  height: auto;
+  max-width: 100%;
   padding: v.$padmidnormal;
 
   @media (min-width: 768px) {
