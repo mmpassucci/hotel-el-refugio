@@ -1,24 +1,15 @@
 @use "./variables" as v;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 
 body {
-    background-color: v.$back;
-    max-width: 90%;
-    margin: auto;
-    font-family: v.$tipo-text;
-    height: 100%;
-
+  background-color: v.$back;
+  max-width: 95%;
+  margin: auto;
+  font-family: v.$tipo-text;
+  height: 100%;
 }
-
-h1 {
-    color: v.$color-prime;
-}
-
-
-
