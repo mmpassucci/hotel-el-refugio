@@ -1,26 +1,31 @@
-
 @use "../utilities/variables" as v;
 
 .hero {
-   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/images/frentehotel.jpg');
-  background-size: cover;      
-  background-position: center;   
-  min-height: 100vh;  
-   display: flex;
-  flex-direction: column;        
-  justify-content: center;       
-  align-items: center;        
+  background-image:
+  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("../img/images/frentehotel.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   border-radius: v.$border-rad-med;
   margin-top: 1rem;
-  
-  h1{
-   font-size: 2rem;
+
+  h1 {
+  color: v.$color-prime;
+  font-size: v.$size-bigger-plus;
   margin-bottom: 1rem;
   color: v.$color-links;
-  font-family: v.$tipo-tit;  
+  font-family: v.$tipo-tit;
+  padding: v.$padmidnormal;
 }
 
-.parrafohero {
-  color: v.$color-links;
-}}
+  .parrafohero {
+    color: v.$color-links;
+    padding: v.$padmidnormal;
+  }
+}
