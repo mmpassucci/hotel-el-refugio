@@ -5,3 +5,13 @@
   color: v.$color-text;
   font-family: v.$tipo-text;
 }
+
+.cardparrafo {
+  color: v.$color-text;
+  line-height: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: v.$size-smaller;
+  padding: v.$padmidnormal;
+  text-wrap: pretty;
+  line-height: 1rem;
+}
