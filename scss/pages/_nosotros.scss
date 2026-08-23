@@ -41,3 +41,38 @@
 .dos {
   padding-bottom: v.$padbig;
 }
+
+.ubicacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+  .map {
+    display: flex;
+    justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: v.$padbig;
+}
+
+.titulomap {
+  font-family: v.$tipo-tit;
+  color: v.$color-details;
+  padding: v.$padnormal;
+}
+
+.parrafomap {
+   max-width: 90%;
+  font-family: v.$tipo-text;
+  color: v.$color-text;
+  font-size: v.$size-smaller;
+  text-align: center;
+  line-height: 1.5;
+  padding: v.$padmidnormal;
+
+   @media (min-width: 768px) {
+    font-size: v.$size-normal;
+  }
+}
